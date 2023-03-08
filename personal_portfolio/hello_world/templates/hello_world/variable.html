@@ -1,0 +1,50 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> variables Example page ! <h1/>
+
+
+        <br/>
+        
+        <h2>{{some_dict.inside_key}}</h2>
+
+        <br/>
+    
+        {# Test If #}
+        
+        {% if is_user_logged_in %}
+            <div>Hello {{username}}</div>
+        {% else %}
+            <div>Hello</div>
+        {% endif %}
+        
+        <br/>
+        
+        
+        {# variables avec filtre #}
+        My First Name is {{ first_name | upper}}.
+
+        <br/>
+        
+        My Last Name is  {{ last_name }}.
+
+        <br/>
+        
+        {# boucle #}
+
+        {% for m in som_list %}
+            {{m}}
+        {% endfor %} 
+
+        <h1> <a href="{% url 'lien_hello_world:variable'%}"> lien vers la page Variable </a></h1>
+        
+</body>
+</html>
+
+

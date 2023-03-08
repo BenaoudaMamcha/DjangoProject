@@ -1,0 +1,35 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'cars/my_costum.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RENTAL REVIEW </h1>
+   {# Html forms #}
+   <div class="container">
+    <form action="POST">
+        {# token de protection doit etre dans chaque form #}
+        {% csrf_token %}
+
+        {%for field in form %}
+            <div class="mb-3">
+                {{field.label_tag}}
+            </div>
+            {{field}}
+        {% endfor%}
+            
+         <br/>
+
+        <input type="submit">
+    </form>    
+   </div>
+   
+
+
+</body>
+</html>

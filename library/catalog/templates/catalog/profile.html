@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcom to your profile</h1>
+    <h1>here are your Books Checkd out :</h1>
+
+    {% for book in bookinstance_list %}
+        <p>{{book }}</p>
+    {% endfor %}
+</body> 
+</html>

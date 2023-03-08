@@ -1,0 +1,17 @@
+{# Heritage #}
+{% extends "base.html" %}
+
+{# Static #}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<h2> This is inside the Block extend.html </h2>
+
+<img src="{% static 'assets/img/bg-masthead.jpg'%}" alt='my image'>
+
+{% endblock %}
